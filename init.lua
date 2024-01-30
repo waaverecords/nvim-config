@@ -41,7 +41,7 @@ require("lazy").setup({
 		config = function ()
 			local configs = require("nvim-treesitter.configs")
 			configs.setup({
-				ensure_installed = { "lua", "typescript", "c_sharp", "javascript" },
+				ensure_installed = { "lua", "typescript", "c_sharp", "javascript", "json" },
 
 				sync_install  = false,
 				auto_install = false,
@@ -73,7 +73,6 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 local telescopeBuiltin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>pf", telescopeBuiltin.find_files, {})
 vim.keymap.set("n", "<C-p>", telescopeBuiltin.git_files, {})
 vim.keymap.set("n", "<leader>ps", function()
 	telescopeBuiltin.grep_string({ search = vim.fn.input("Grep > ") })
