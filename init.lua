@@ -73,11 +73,11 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>d", vim.cmd.Ex)
 
 local telescopeBuiltin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>sw", function()
+vim.keymap.set("n", "<leader>fw", function()
 	telescopeBuiltin.grep_string({ search = "" })
 end)
-vim.keymap.set("n", "<leader>csw", telescopeBuiltin.grep_string)
-vim.keymap.set("n", "<leader>sf", telescopeBuiltin.git_files)
+vim.keymap.set("n", "<leader>cfw", telescopeBuiltin.grep_string)
+vim.keymap.set("n", "<leader>ff", telescopeBuiltin.git_files)
 
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
 
