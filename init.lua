@@ -63,8 +63,24 @@ require("lazy").setup({
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.5",
 		dependencies = { "nvim-lua/plenary.nvim" }
+	},
+
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" }
 	}
 
+})
+
+require("lualine").setup({
+	sections = {
+		lualine_a = { "mode" },
+		lualine_b = { "filename" },
+		lualine_c = {},
+		lualine_x = {},
+		lualine_y = { "progress" },
+		lualine_z = { "location" }
+	}
 })
 
 
