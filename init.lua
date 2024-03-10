@@ -92,8 +92,12 @@ local telescopeBuiltin = require("telescope.builtin")
 vim.keymap.set("n", "<leader>fw", function()
 	telescopeBuiltin.grep_string({ search = "" })
 end)
+
 vim.keymap.set("n", "<leader>cfw", telescopeBuiltin.grep_string)
 vim.keymap.set("n", "<leader>ff", telescopeBuiltin.git_files)
+
+vim.keymap.set("n", "+",[[<cmd>vertical resize +5<cr>]])
+vim.keymap.set("n", "-",[[<cmd>vertical resize -5<cr>]])
 
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
 
