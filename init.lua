@@ -99,7 +99,13 @@ vim.keymap.set("n", "<leader>ff", telescopeBuiltin.git_files)
 vim.keymap.set("n", "+",[[<cmd>vertical resize +5<cr>]])
 vim.keymap.set("n", "-",[[<cmd>vertical resize -5<cr>]])
 
-vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
+vim.keymap.set("n", "<A-j>", ":m .+1<CR>==")
+vim.keymap.set("n", "<A-k>", ":m .-2<CR>==")
+vim.keymap.set("i", "<A-j>", "<Esc>:m .+1<CR>==gi")
+vim.keymap.set("i", "<A-k>", "<Esc>:m .-2<CR>==gi")
+vim.keymap.set("v", "<A-j>", ":m '>+1<CR>==gv")
+vim.keymap.set("v", "<A-k>", ":m '<-2<CR>==gv")
 
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
 
 vim.cmd [[colorscheme dracula]]
